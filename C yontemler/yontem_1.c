@@ -1,12 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
-#define PI 3.14159265
+#include "functions.h"
 
-double func(double number);
-double func2(double number);
-double func3(double number);
-double multi(double x1, double h,int which_func);
+#define PI 3.14159265
 
 int main(int argc, char *argv[]) {
 	double  epsilon = 0.00001, x1 = 0, a = 2, h = 1, temp = 0;
@@ -29,32 +25,4 @@ int main(int argc, char *argv[]) {
         if (i>6) break;
     }
     return 0;
-}
-
-double func(double number){
-
-    double val = sin(number * PI / 180) ;
-//  	return pow(number, 2) - 10*(float)val  - 3;
-  return pow(number, 2) - 10*sin(number)  - 3;
-}
-
-double func2(double number){	
-	return pow(number, 5) - 2*pow(number, 4) + 3*pow(number, 3) - number + 5;
-}
-
-double multi(double x1, double h,int which_func){
-    if(which_func == 1){
-        return func(x1)*func(x1 + h); 
-    }
-     else if(which_func==2){
-        return func2(x1)*func2(x1 + h);
-    }
-    else
-    {
-        return 0;
-    }
-}
-
-double func3(double number){
-    return pow(number, 3) -2*pow(number,2) - 5;
 }
