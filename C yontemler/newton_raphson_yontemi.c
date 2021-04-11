@@ -5,11 +5,7 @@
 
 #define PI 3.14159265
 
-
-int main(){
-
+int main(void) {
     
-
-
-
-    return 0 ;}
+    return 0;
+}

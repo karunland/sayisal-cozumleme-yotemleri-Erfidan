@@ -9,9 +9,11 @@ double func3(double number);
 double func_4(double number);
 double func_kesen_nokta_yont(double x1, double x2);
 
-double func(double number){
-    double val = sin(number * PI / 180) ;
-  	return pow(number, 2) - 10*(float)val  - 3;
+double func_sin(double number){
+    int val = sin(number * PI/180) ; //printf("%.1f", func_sin(0));
+                                     //şeklinde kullanılmalı//should be used as
+                                     
+  	return pow(number, 2) - 10*val  - 3;
 }
 
 double func2(double number){	
@@ -30,5 +32,3 @@ double func_kesen_nokta_yont(double x1, double x2){
 
     return ( x1*func3(x2) - x2*func3(x1) )/( func3(x2)-(func3(x1)));
 }
-
-
